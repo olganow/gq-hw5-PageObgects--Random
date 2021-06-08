@@ -8,10 +8,28 @@ import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
-public class StudentRegistrationFormTests {
+
+public class TextBoxTestsHw2 {
+
+    String firstNameUser = "Firstname",
+            lastNameUser = "Secondname",
+            email = "useremail@mail.ma",
+            gender = "Female",
+            phone = "1234567890",
+            yearOfBirth = "1998",
+            monthOfbirth = "May",
+            dayOfbirth = "12",
+            picture = "testcat.png";   //dayOfWeekOfBirth = "Friday"
+
+
+    @BeforeAll
+    static void setup() {
+        Configuration.startMaximized = true;
+    }
+
+
     @Test
     void successfulSubmitFormTest() {
         open("https://demoqa.com/automation-practice-form");
