@@ -45,7 +45,7 @@ public class TextBoxTestsHw2 {
         $(".react-datepicker__day--0" + dayOfbirth).click();
 
         //$("[aria-label='Choose Friday, May 29th, 1998']").click();
-        //   $(String.format("[aria-label='Choose %s, %s, %s']", dayOfWeekOfBirth,monthOfbirth, dayOfbirth,yearOfBirth))
+        // $(String.format("[aria-label='Choose %s, %s, %s']", dayOfWeekOfBirth,monthOfbirth, dayOfbirth,yearOfBirth))
         //$(String.format("react-datepicker__day--0%s:not(react-datepicker__day--outside-month)", dayOfbirth)).click();
         $("#subjectsInput").setValue("Economics").pressEnter();
         $("#subjectsInput").setValue("Biology").pressEnter();
