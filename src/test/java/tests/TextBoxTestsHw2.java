@@ -21,7 +21,7 @@ public class TextBoxTestsHw2 {
             yearOfBirth = "1998",
             monthOfbirth = "May",
             dayOfbirth = "12",
-            picture = "testcat.png";   //dayOfWeekOfBirth = "Friday"
+            picture = "testcat.png";   //dayOfWeekOfBirth = "Friday "
 
 
     @BeforeAll
