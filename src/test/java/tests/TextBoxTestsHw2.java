@@ -21,7 +21,7 @@ public class TextBoxTestsHw2 {
             yearOfBirth = "1998",
             monthOfbirth = "May",
             dayOfbirth = "12",
-            picture = "testcat.png";   //dayOfWeekOfBirth = "Friday "
+            picture = "testcat.png";
 
 
     @BeforeAll
@@ -48,9 +48,9 @@ public class TextBoxTestsHw2 {
         // $(String.format("[aria-label='Choose %s, %s, %s']", dayOfWeekOfBirth,monthOfbirth, dayOfbirth,yearOfBirth))
         //$(String.format("react-datepicker__day--0%s:not(react-datepicker__day--outside-month)", dayOfbirth)).click();
         $("#subjectsInput").setValue("Economics").pressEnter();
-        $("#subjectsInput").setValue("Biology").pressEnter();
-        $(byText("Sports")).scrollTo().click();
-        $(byText("Music")).click();
+        $("#subjectsInput").setValue("Biology").scrollTo().pressEnter();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
+        $("#hobbiesWrapper").$(byText("Music")).click();
         //          $("#uploadPicture").uploadFile(new File("src/test/resources/testcat.png"));
         $("#uploadPicture").uploadFromClasspath(picture);
         $("[id=currentAddress]").setValue("Russia, Spb, 21");
