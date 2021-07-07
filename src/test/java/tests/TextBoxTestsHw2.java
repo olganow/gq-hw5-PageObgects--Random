@@ -38,7 +38,7 @@ public class TextBoxTestsHw2 {
         $("[id=lastName]").setValue(lastNameUser);
         $("[id=userEmail]").setValue(email);
         $("[id=genterWrapper]").$(byText(gender)).click();
-        $("[id=userNumber").setValue(phone);
+        $("[id=userNumber]").setValue(phone);
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(monthOfbirth);
         $(".react-datepicker__year-select").selectOption(yearOfBirth);
@@ -49,14 +49,14 @@ public class TextBoxTestsHw2 {
         //$(String.format("react-datepicker__day--0%s:not(react-datepicker__day--outside-month)", dayOfbirth)).click();
         $("#subjectsInput").setValue("Economics").pressEnter();
         $("#subjectsInput").setValue("Biology").pressEnter();
-        $(byText("Sports")).click();
+        $(byText("Sports")).scrollTo().click();
         $(byText("Music")).click();
         //          $("#uploadPicture").uploadFile(new File("src/test/resources/testcat.png"));
         $("#uploadPicture").uploadFromClasspath(picture);
-        $("[id=currentAddress").setValue("Russia, Spb, 21");
+        $("[id=currentAddress]").setValue("Russia, Spb, 21");
         $("#react-select-3-input").setValue("Uttar Pradesh").pressEnter();
         $("#react-select-4-input").setValue("Lucknow").pressEnter();
-        $("[id=submit]").click();
+        $("#submit").scrollTo().click();
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $x("//td[text()='Student Name']").parent().shouldHave(text(firstNameUser + " " + lastNameUser));
@@ -65,7 +65,7 @@ public class TextBoxTestsHw2 {
         $x("//td[text()='Mobile']").parent().shouldHave(text(phone));
         $x("//td[text()='Date of Birth']").parent().shouldHave(text(dayOfbirth + " " + monthOfbirth + "," + yearOfBirth));
         $x("//td[text()='Subjects']").parent().shouldHave(text("Economics, Biology"));
-        $x("//td[text()='Hobbies']").parent().shouldHave(text("Sports, Music"));
+        $x("//td[text()='Hobbies']").parent().shouldHave(text("Sports"));
         $x("//td[text()='Picture']").parent().shouldHave(text(picture));
         $x("//td[text()='Address']").parent().shouldHave(text("Russia, Spb, 21"));
         $x("//td[text()='State and City']").parent().shouldHave(text("Uttar Pradesh Lucknow"));
